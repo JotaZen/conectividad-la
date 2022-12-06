@@ -30,7 +30,7 @@ async function getData(){
   let filas = data.split('\n')
   filas = filas.map((fila) => fila.split(',')).slice(1)
   filas.forEach((row) => {
-
+  try {
     const ltd = row[4].split(" ").filter((x) => {
       x = parseInt(x)
       if (x == NaN) {}
@@ -51,7 +51,7 @@ async function getData(){
       radius: row[2] !== 'Satelital' ? 550 : 1000
     }).addTo(map)
     circulo.bindPopup(`${row[1]}\n${row[2]}\n${row[3]}\n`)
-  })
+  })} catch (e){}
 }
 getData()
 
