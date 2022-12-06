@@ -51,7 +51,7 @@ async function getData(){
       radius: row[2] !== 'Satelital' ? 550 : 1000
     }).addTo(map)
     circulo.bindPopup(`${row[1]}\n${row[2]}\n${row[3]}\n`)
-  })} catch (e){}
+  }catch (e){}} 
 }
 getData()
 
