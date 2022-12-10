@@ -1,19 +1,61 @@
 body {
+    overflow-x: hidden;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: Helvetica, sans-serif;
-    
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
 }
-h2 {
-    font-weight: 10;
+:root {
+    --main-bg-color: #38668b;
+  }
+#title {
+    height: auto;
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    color: aliceblue;
+    padding: 15px 5px 13px 5px;
+    margin: 0;
+    width: 100vw;
+    background-color: var(--main-bg-color);
+    border-bottom: white 1px solid;
 }
 #map {
     display: flex;
     justify-content: center;
     height: 70vh;
+    border: solid 1px gold;
 }
-
+#coordenadas {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    color: aliceblue;
+    padding: 3px;
+    margin: auto;
+    width: 90%;
+    background-color: var(--main-bg-color);
+    border: solid white 1px;
+    border-radius: 10px;
+    margin-top: 3px;
+}
+#coor_title {
+    text-align: center;
+    font-weight: bold;
+    color: aliceblue;
+    padding: 10px;
+    margin: 0;
+    width: 100%;
+    background-color: var(--main-bg-color);
+    border-bottom: white 1px solid;
+}
+#modal {
+    display: none;
+}
 @media only screen and (min-width: 800px) {
     #map {
         width: 800px;
