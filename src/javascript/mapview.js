@@ -21,7 +21,7 @@ map.on('click', function (m) {
   if (marcador){marcador.remove()}
   marcador = L.marker(m.latlng).addTo(map)
   button.innerHTML = `Latitud: ${m.latlng.lat} , Longitud: ${m.latlng.lng}`
-  button.style.backgroundColor = '#5287b3'
+  button.style.backgroundColor = '#0059B6'
   button.addEventListener('click', () => {
     var aux = document.createElement("input");
     aux.setAttribute("value", button.innerHTML);
