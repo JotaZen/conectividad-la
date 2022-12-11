@@ -1,8 +1,5 @@
-let marcador
-var map = L.map('map').setView(coordenadasCentroLA, 10)
-const button = document.getElementById('coordenadas')
-
 // Mapa
+var map = L.map('map').setView(coordenadasCentroLA, 10)
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 16,
   minZoom: 9,
@@ -17,6 +14,8 @@ const comuna = L.polygon(
 ).addTo(map)
 
 // Marcador y coordenadas de usuario
+let marcador
+const button = document.getElementById('coordenadas')
 map.on('click', function (m) {
   if (marcador){marcador.remove()}
   marcador = L.marker(m.latlng).addTo(map)
@@ -29,12 +28,12 @@ map.on('click', function (m) {
     aux.select();
     document.execCommand("copy");
     document.body.removeChild(aux);
-    button.style.backgroundColor = 'grey'
+    button.style.backgroundColor = '#00FFAB'
   })
 })
 
-
 // Recuperar datos del formulario
+window.addEventListener('load', getData)
 async function getData(){
   let response = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vSsvgLtFTpz7lsQBIzEsQYAsT0FeuMfw_lzb3dcOrs0QgQFsCTeTTz8cSXEVpY36EUnn_StGf_qpgeL/pub?gid=1770946352&single=true&output=csv')
   let data = await response.text()
@@ -64,5 +63,5 @@ async function getData(){
     circulo.bindPopup(`${row[1]}\n${row[2]}\n${row[3]}\n`)
   }catch (e){}})
 }
-getData()
+
 

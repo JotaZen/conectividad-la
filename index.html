@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="./src/css/style.css">
     <link rel="icon" href="./public/web_icon.png">
+    <link rel="stylesheet" href="https://use.typekit.net/peo0evu.css">
     <title>C.L.A.</title>
     <!-- Leaflet plugin-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
@@ -17,30 +18,29 @@
      crossorigin=""></script>
 </head>
 <body>
-    <div id="title"> 
+    <header id="title"> 
         <h2 id="h2_title">三</h2>
-        <h2 id="h2_title">CONECTIVIDAD LOS ÁNGELES</h2>
-    </div>
-   
+        <h2 id="h2_title">Conectividad Los Ángeles</h2>
+    </header>
     <main id="main">
         <div id="map"></div>
         <h3 id="coor_title">Presione el mapa para mostrar su ubicación, y la caja debajo para copiar.</h3>
         <h3 id="coordenadas"> • • • </h3>
         <div>
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeUFogYmPt5BVdN7rvkne1bZhgRuQQpYhWjHZ11eILl2xMdPQ/viewform?embedded=true" 
-            width="100%" height="1400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            width="100%" height="1420" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </div>
-        <div id="res">
-            <h1> RESPUESTAS </h1>
-            <iframe height="600" width="100%"
-            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSsvgLtFTpz7lsQBIzEsQYAsT0FeuMfw_lzb3dcOrs0QgQFsCTeTTz8cSXEVpY36EUnn_StGf_qpgeL/pubhtml?gid=1770946352&amp;single=true&amp;widget=true&amp;headers=false">
-            </iframe>
-        </div>
-        <div id="modal" style="display: none;"></div>
-
-        <script src="./src/javascript/sample_data.js"></script>
-        <script src="./src/javascript/comunaLA.js"></script>
-        <script src="./src/javascript/mapview.js"></script>
     </main>
+    <div id="res">
+        <h1> RESPUESTAS </h1>
+        <iframe height="600" width="100%" 
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSsvgLtFTpz7lsQBIzEsQYAsT0FeuMfw_lzb3dcOrs0QgQFsCTeTTz8cSXEVpY36EUnn_StGf_qpgeL/pubhtml?gid=1770946352&amp;single=true&amp;widget=true&amp;headers=false">
+        </iframe>
+    </div>
+
+    <script src="./src/javascript/sample_data.js"></script>
+    <script src="./src/javascript/comunaLA.js"></script>
+    <script src="./src/javascript/mapview.js"></script>
+
 </body>
 </html>
