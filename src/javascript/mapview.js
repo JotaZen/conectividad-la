@@ -20,7 +20,7 @@ map.on('click', function (m) {
   if (marcador){marcador.remove()}
   marcador = L.marker(m.latlng).addTo(map)
   button.innerHTML = `Latitud: ${m.latlng.lat} , Longitud: ${m.latlng.lng}`
-  button.style.backgroundColor = '#0059B6'
+  button.style.backgroundColor = '#00FFAB'
   button.addEventListener('click', () => {
     var aux = document.createElement("input");
     aux.setAttribute("value", button.innerHTML);
@@ -28,7 +28,7 @@ map.on('click', function (m) {
     aux.select();
     document.execCommand("copy");
     document.body.removeChild(aux);
-    button.style.backgroundColor = '#00FFAB'
+    button.style.backgroundColor = 'grey'
   })
 })
 
